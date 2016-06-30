@@ -55,6 +55,7 @@ from .devices import (
     ChannelUninstall,
     NamedUser,
     NamedUserList,
+    Channel,
 )
 
 from .reports import (
@@ -118,6 +119,7 @@ __all__ = [
     PerPushSeries,
     NamedUser,
     NamedUserList,
+    Channel,
 ]
 
 # Silence urllib3 INFO logging by default

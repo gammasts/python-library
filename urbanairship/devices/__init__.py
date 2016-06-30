@@ -28,3 +28,7 @@ from .named_users import (
     NamedUser,
     NamedUserList
 )
+
+from .channels import (
+    Channel,
+)
