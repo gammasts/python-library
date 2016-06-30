@@ -67,9 +67,12 @@ def mpns(uuid):
     return {'mpns': uuid.lower().strip()}
 
 
-def tag(tag):
+def tag(tag, group=None):
     """Select a single tag."""
-    return {'tag': tag}
+    if group is None:
+        return {'tag': tag}
+    else:
+        return {'tag': tag, 'group': group}
 
 
 def alias(alias):
