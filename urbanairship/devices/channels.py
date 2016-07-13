@@ -28,6 +28,9 @@ class Channel(object):
         else:
             raise ValueError('A channel ID is required for modifying tags')
 
+        if (add, remove, set) == (None, None, None):
+            raise ValueError('An add, remove, or set field was not set')
+
         payload['audience'] = audience
 
         if add is not None:
@@ -44,8 +47,6 @@ class Channel(object):
 
         if set is not None:
             payload['set'] = {group: set}
-        if not add and not remove and not set:
-            raise ValueError('An add, remove, or set field was not set')
 
         body = json.dumps(payload).encode('utf-8')
         print body
